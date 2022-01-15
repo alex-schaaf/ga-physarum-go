@@ -14,6 +14,7 @@ import (
 
 const width = 240
 const height = 240
+const nAgents = 256
 const sensorAngle = 14
 const sensorDistance = 9
 
@@ -104,7 +105,7 @@ func main() {
 	t0 := time.Now()
 
 	var agents []*Agent
-	for i := 0; i < 100; i++ {
+	for i := 0; i < nAgents; i++ {
 		agent := &Agent{
 			x:              rand.Float64() * width,
 			y:              rand.Float64() * height,
